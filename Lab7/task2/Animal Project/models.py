@@ -25,16 +25,18 @@ class Dog(Animal):
     def eat(self):
         return f"{self.name} the dog is munching on dog food."
 
-    class Cat(Animal):
-        def __init__(self, name, age, color):
-            super().__init__(name, age, "Cat")
-            self.color = color
 
-        def speak(self):
-            return f"{self.name} says: Meow!"
 
-        def sleep(self):
-            return f"{self.name} the cat is napping on the sofa."
+class Cat(Animal):
+    def __init__(self, name, age, color):
+        super().__init__(name, age, "Cat")
+        self.color = color
+
+    def speak(self):
+        return f"{self.name} says: Meow!"
+
+    def sleep(self):
+        return f"{self.name} the cat is napping on the sofa."
 
 
 dog1 = Dog("Rex", 3, "Labrador")
