@@ -1,21 +1,22 @@
-from models import Animal, Dog, Cat
+from models import Animal,Dog,Cat
 
 def main():
-    animal1 = Animal("Buddy", 5, "Generic Animal")
-    dog1 = Dog("Rex", 3, "Labrador")
-    cat1 = Cat("Whiskers", 2, "Gray")
+    animal1=Animal("aq qagaz",6,"horse")
+    dog1=Dog("Qytzhol",3,"Labrador")
+    cat1=Cat("Tompi",4,"white")
 
-    animals = [animal1, dog1, cat1]
+    animals=[animal1,dog1,cat1]
 
     for a in animals:
         print(a)
         print(a.eat())
         print(a.sleep())
-        if isinstance(a, Dog):
+        if isinstance(a,Dog):
             print(a.speak())
-        elif isinstance(a, Cat):
+        elif isinstance(a,Cat):
             print(a.speak())
-        print("-" * 40)
 
-if __name__ == "__main__":
+
+
+if __name__=="__main__":
     main()
