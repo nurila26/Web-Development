@@ -9,8 +9,9 @@ def products_list(request):
 
 def product_detail(request, id):
     product = Product.objects.filter(id=id).values().first()
-    return JsonResponse(product, safe=False)
-
+    if product:
+        return JsonResponse(product)
+    return JsonResponse({'error': 'Product not found'}, status=404)
 
 def categories_list(request):
     categories = Category.objects.all()
@@ -23,5 +24,9 @@ def category_detail(request, id):
 
 
 def category_products(request, id):
-    products = Product.objects.filter(category_id=id).values()
+    category = Category.objects.filter(id=id).first()
+    if not category:
+        return JsonResponse({'error': 'Category not found'}, status=404)
+
+    products = category.products.all().values()
     return JsonResponse(list(products), safe=False)
