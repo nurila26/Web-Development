@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/lab7.iml" filepath="$PROJECT_DIR$/.idea/lab7.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/shop-back.iml" filepath="$PROJECT_DIR$/.idea/shop-back.iml" />
+>>>>>>> 1d353ac (lab8 django api)
     </modules>
   </component>
 </project>
